@@ -11,6 +11,7 @@ class Counter extends React.Component{
 
   alterarTitulo = () =>{
     //TODO: Chamar função para alterar o título no redux
+    this.props.dispatch({ type: 'ALTERAR_TITULO'});
   }
 
     render(){
