@@ -6,6 +6,7 @@ class Counter extends React.Component{
   
   increment = () =>{
     //TODO: Chamar função para incrementar no próprio redux
+    this.props.dispatch({ type: 'INCREMENT', 'count': 10 });
   }
 
   alterarTitulo = () =>{

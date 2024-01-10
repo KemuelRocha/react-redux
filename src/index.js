@@ -14,10 +14,17 @@ const initialStates = {
 }
 
 function reducer(state = initialStates, action) {
+  if (action.type === 'INCREMENT') {
+    return {
+      count: action.count,
+      title: state.title
+    }
+  }
   return state;
 }
 
 const store = createStore(reducer);
+
 
 root.render(
   <React.StrictMode>
