@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import axios from 'axios';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import Counter from './Counter';
@@ -16,7 +17,7 @@ const initialStates = {
 function reducer(state = initialStates, action) {
   if (action.type === 'INCREMENT') {
     return {
-      count: action.count,
+      count: state.count + 1,
       title: state.title
     }
   }
